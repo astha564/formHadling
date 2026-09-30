@@ -53,12 +53,14 @@ const App = () => {
       return;
     } 
 
-    setUsers((prevUsers)=>[
+    setUsers((prevUsers) => [
       ...prevUsers,
-      fullName: formData.fullName,
-      email: formData.email,
-      password: formData.password
-    ]); 
+      {
+        fullName: formData.fullName,
+        email: formData.email,
+        password: formData.password
+      }
+    ]);
 
     setError("");
     setFormData({
